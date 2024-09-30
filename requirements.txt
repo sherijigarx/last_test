@@ -49,8 +49,6 @@ GPUtil==1.4.0
 encodec==0.1.1
 funcy==2.0
 transformers==4.37.2
-audiolm-pytorch==2.0.7
-# speechbrain==0.5.16
 datasets==2.16.1
 librosa==0.10.0.post2
 jiwer==3.0.3
