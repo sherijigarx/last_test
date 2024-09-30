@@ -2,20 +2,12 @@ import os
 import argparse
 import bittensor as bt
 import sys
-import asyncio
-import traceback
 from datasets import load_dataset
-import torch
-import random
-import csv
 import pandas as pd
-import torchaudio
-from tabulate import tabulate
 import inflect
 import re
 # Import your module
 import lib
-import traceback
 import platform
 import psutil
 import GPUtil
