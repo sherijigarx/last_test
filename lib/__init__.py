@@ -73,12 +73,8 @@ legit_validators = ['5F4tQyWrhfGVcNhoqeiNsR6KjD4wMZ2kfhLj4oHYuyHbZAc3',
     '5HBVrFGy6oYhhh71m9fFGYD7zbKyAeHnWN8i8s9fJTBMCtEE',
     '5GsL9zNp1CdKmKSYBGjeF9kGReRpS8KdQv2yJ3mHVwKq2YCq',]
 
-MIN_STAKE = 20000
+MIN_STAKE = 0
 WHITELISTED_VALIDATORS = legit_validators
 
 # Import all submodules.
 from . import protocol
-from . import reward
-from . import clone_score
-from . import subjective
-from . import globals
