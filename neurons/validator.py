@@ -21,7 +21,6 @@ from classes.aimodel import AIModelService
 class AIModelController():
     def __init__(self):
         self.aimodel = AIModelService()
-        self.config = self.aimodel.config
         self.music_generation_service = MusicGenerationService()
         self.last_run_start_time = dt.datetime.now()
 
