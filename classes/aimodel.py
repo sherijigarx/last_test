@@ -52,11 +52,11 @@ class AIModelService:
 
         parser.add_argument("--alpha", default=0.75, type=float, help="The weight moving average scoring.")
         parser.add_argument("--custom", default="my_custom_value", help="Adds a custom value to the parser.")
+        parser.add_argument("--subtensor.network", type=str, default="test", help="The logging directory.")
         parser.add_argument("--netuid", default=31, type=int, help="The chain subnet uid.")
         parser.add_argument("--vcdnp", type=int, default=10, help="Number of miners to query for each forward call.")
         parser.add_argument("--wallet.name", type=str, default="valid", help="The wallet name.")
         parser.add_argument("--wallet.hotkey", type=str, default="hot", help="The wallet hotkey.")
-        parser.add_argument("--subtensor.network", type=str, default="finney", help="The logging directory.")
 
 
         # Add Bittensor specific arguments
