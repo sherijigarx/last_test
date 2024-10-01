@@ -71,7 +71,7 @@ class AIModelService:
     #     # Parse and return the config
     #     config = bt.config(args)
     #     return config
-    def get_config():
+    def get_config(self):
         parser = argparse.ArgumentParser(description='Validator for TTM')
 
         # Add custom arguments
