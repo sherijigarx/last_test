@@ -42,7 +42,7 @@ class AIModelService:
         self.p = inflect.engine()
         self.vcdnp = self.config.vcdnp
         if AIModelService._scores is None:
-            AIModelService._scores = self.metagraph.E.clone().detach()
+            AIModelService._scores = self.metagraph.E #.clone().detach()
         self.scores = AIModelService._scores
         self.uid = self.metagraph.hotkeys.index(self.wallet.hotkey.ss58_address)
 
