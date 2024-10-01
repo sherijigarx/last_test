@@ -72,8 +72,8 @@ class AIModelService:
         hotkeys = metagraph.hotkeys  # List of hotkeys
         coldkeys = metagraph.coldkeys  # List of coldkeys
         UIDs = range(len(hotkeys))  # Assuming UID is the index of neurons
-        stakes = metagraph.S.numpy()  # Total stake
-        emissions = metagraph.E.numpy()  # Emission
+        stakes = metagraph.S #.numpy()  # Total stake
+        emissions = metagraph.E #.numpy()  # Emission
         axon = metagraph.axons
         # Create a DataFrame from the metagraph data
         df = pd.DataFrame({
