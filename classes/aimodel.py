@@ -47,48 +47,22 @@ class AIModelService:
         self.uid = self.metagraph.hotkeys.index(self.wallet.hotkey.ss58_address)
 
 
-    # def get_config(self):
-    #     # parser = argparse.ArgumentParser()
-    #     parser = argparse.ArgumentParser(description='Validator for TTM')
-
-    #     parser.add_argument("--alpha", default=0.75, type=float, help="The weight moving average scoring.")
-    #     parser.add_argument("--custom", default="my_custom_value", help="Adds a custom value to the parser.")
-    #     # parser.add_argument("--netuid", type=int, default=50, help="The chain subnet uid.")
-    #     parser.add_argument("--vcdnp", type=int, default=10, help="Number of miners to query for each forward call.")
-    #     parser.add_argument('--netuid', type=int, required=True, help='Network UID')
-    #     parser.add_argument('--wallet.name', type=str, required=True, help='Wallet name')
-    #     parser.add_argument('--wallet.hotkey', type=str, required=True, help='Wallet hotkey')
-    #     parser.add_argument('--logging.trace', action='store_true', help='Enable trace logging')
-    #     parser.add_argument('--subtensor.network', type=str, required=True, help='Subtensor network to connect to')
-    #     args = parser.parse_args()
-
-
-    #     # Add Bittensor specific arguments
-    #     bt.subtensor.add_args(args)
-    #     bt.logging.add_args(args)
-    #     bt.wallet.add_args(args)
-
-    #     # Parse and return the config
-    #     config = bt.config(args)
-    #     return config
     def get_config(self):
-        parser = argparse.ArgumentParser(description='Validator for TTM')
+        parser = argparse.ArgumentParser()
 
-        # Add custom arguments
-        parser.add_argument('--netuid', type=int, required=True, help='Network UID')
-        parser.add_argument('--wallet.name', type=str, required=True, help='Wallet name')
-        parser.add_argument('--wallet.hotkey', type=str, required=True, help='Wallet hotkey')
-        parser.add_argument('--subtensor.network', type=str, required=True, help='Subtensor network to connect to')
+        parser.add_argument("--alpha", default=0.75, type=float, help="The weight moving average scoring.")
+        parser.add_argument("--custom", default="my_custom_value", help="Adds a custom value to the parser.")
+        parser.add_argument("--netuid", type=int, default=50, help="The chain subnet uid.")
+        parser.add_argument("--vcdnp", type=int, default=10, help="Number of miners to query for each forward call.")
 
         # Add Bittensor specific arguments
         bt.subtensor.add_args(parser)
-        bt.wallet.add_args(parser)
         bt.logging.add_args(parser)
+        bt.wallet.add_args(parser)
 
-        args = parser.parse_args()
-        config = bt.config(args)
+        # Parse and return the config
+        config = bt.config(parser)
         return config
-
 
     def priority_uids(self, metagraph):
         hotkeys = metagraph.hotkeys  # List of hotkeys
