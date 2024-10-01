@@ -1,8 +1,6 @@
 # BittAudio (SN 16) | Audio Generation Subnet on Bittensor
 ![bitaudio](docs/bittaudio.jpg)
 The main goal of the BittAudio is to establish a decentralized platform that incentivizes the creation, distribution and also monetization of AI audio content, such as:
-- Text-to-Speech (TTS)
-- Voice Cloning (VC)
 - Text-to-Music (TTM) <br>
 
 Validators and miners work together to ensure high-quality outputs, fostering innovation and rewarding contributions in the audio domain.<br>
