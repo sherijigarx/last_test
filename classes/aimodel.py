@@ -14,8 +14,7 @@ import GPUtil
 import subprocess
 from lib import __spec_version__ as spec_version
 from classes.corcel_prompt import CorcelAPI
-import default_args as args
-
+from classes.default_args import default_args as args
 class AIModelService:
     _scores = None
     _base_initialized = False  # New class-level flag
